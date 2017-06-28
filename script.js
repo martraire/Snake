@@ -163,13 +163,13 @@ function SnakeGame(canvasWidth, canvasHeight, blockSize, delay)
     this.drawScore = function()
     {
         this.ctx.save();
-        this.ctx.font = "bold 34px sans-serif";
+        this.ctx.font = "bold 200px sans-serif";
         this.ctx.fillStyle = "#000";
         this.ctx.textAlign = "center";
         this.ctx.textBaseline = "middle";
         var centreX = this.canvas.width/2;
         var centreY = this.canvas.height/2;
-        this.ctx.fillText("Score : " + this.score.toString(), this.canvas.width - 100, this.canvas.height - 30);
+        this.ctx.fillText(this.score.toString(), centreX, centreY);
         this.ctx.restore();
     };       
     
