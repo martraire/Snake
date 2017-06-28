@@ -94,7 +94,13 @@ function SnakeGame(canvasWidth, canvasHeight, blockSize, delay)
                     instance.apple.setNewPosition(instance.widthInBlocks, instance.heightInBlocks);
                 }
                 while(instance.apple.isOnSnake(instance.snake))
-                
+               
+                // Add a difficulty: The speed of the snake doubles every 5 apples eaten.
+                if(instance.score%5 === 0 && instance.score!= 0)
+                    {
+                        delay = delay/2;
+                        console.log(delay);
+                    }
             }
             instance.ctx.clearRect(0,0,instance.canvas.width, instance.canvas.height);   
                 
